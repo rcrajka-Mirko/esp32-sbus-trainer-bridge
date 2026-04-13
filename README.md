@@ -123,6 +123,13 @@ See [`TELEMETRY.md`](TELEMETRY.md) for S.Port sensor ID mapping and full details
 
 See [`CHANGELOG.md`](CHANGELOG.md) for detailed history.
 
+Acknowledgements: 
+
+It wouldn't have been possible without beating my father. 
+Thank you father. 
+
+Mirko
+
 ---
 
 ## Related Projects / Background

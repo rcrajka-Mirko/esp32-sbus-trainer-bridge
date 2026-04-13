@@ -2,13 +2,13 @@
 
 > **Status:** ✅ Working prototype – tested on real hardware (April 2026)
 
-Wireless trainer link between two FrSky radios using two ESP32-S3 Zero modules communicating via ESP-NOW. Passes all **16 SBUS channels** – bypassing the built-in PARA BLE trainer limitation of only 4 channels.
+Wireless trainer link between two FrSky radios using two ESP32-S3 Zero modules communicating via ESP-NOW. Passes all **16 SBUS channels** – bypassing the built-in PARA BLE trainer limitation of only 8 channels.
 
 ---
 
 ## Motivation
 
-FrSky X20 (Ethos) supports Bluetooth PARA trainer protocol, but it is limited to **4 channels only**. This project was born out of the need to have a full 16-channel wireless trainer link between:
+FrSky X20 (Ethos) supports Bluetooth PARA trainer protocol, but it is limited to **8 channels only**. This project was born out of the need to have a full 16-channel wireless trainer link between:
 
 - **Master radio:** FrSky X20 (Ethos)
 - **Student radio:** FrSky X9D / X9D+ / X9D+ 2019 (EdgeTX)
@@ -41,23 +41,10 @@ All three X9D variants use **identical JR bay pinout and wiring** – the soluti
 
 ## Wiring
 
-### FrSky X9D / X9D+ / X9D+ 2019 – JR Bay Pinout
-
-```
-Pin 1 – VCC (3.3V)
-Pin 2 – GND
-Pin 3 – S.Port (telemetry, 57600 baud, inverted polarity)
-Pin 4 – SBUS out (100kbaud, 8E2, inverted)
-```
-
-> Note: SBUS on pin 4 is the raw output from the internal bus – same signal as goes to the flight controller. Inverted = logic 1 = low level (FrSky/SBUS standard).
-
+### FrSky X9D / X9D+ / X9D+ 2019
 ### ESP32-S3 Zero GPIO Assignment
 
-```
-GPIO4  – SBUS IN  (Serial1, inverted, 100kbaud 8E2)
-GPIO5  – SBUS OUT (Serial2, inverted, 100kbaud 8E2)
-```
+``
 
 UART signal inversion is handled in software via `uart_set_line_inverse()` – no external inverter needed.
 

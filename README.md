@@ -33,8 +33,8 @@ All three X9D variants use **identical JR bay pinout and wiring** – the soluti
 | Component | Quantity | Notes |
 |---|---|---|
 | Waveshare ESP32-S3 Zero | 2 | One per radio |
-| 7805 voltage regulator | 1 | 5V stabilization |
-| Electrolytic capacitor | 1 | Voltage smoothing |
+| 7805 voltage regulator | 2 | 5V stabilization |
+| Electrolytic capacitor | 4 | Voltage smoothing |
 | Resistors, wires | – | Standard prototyping parts |
 
 ---
